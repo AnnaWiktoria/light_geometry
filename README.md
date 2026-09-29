@@ -28,7 +28,7 @@ This tool helps answer three core questions:
 
 | File                  | Description                                                                                                                                                                                                                                   |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `light_geometry.html` | **Interactive Web Version.** Standalone single-file application. Runs offline in any browser without installation. Features a dark UI, interactive light positioning via drag-and-drop, softbox resizing, and real-time canvas visualization. |
+| `index.html` | **Interactive Web Version.** Standalone single-file application. Runs offline in any browser without installation. Features a dark UI, interactive light positioning via drag-and-drop, softbox resizing, and real-time canvas visualization. |
 | `light_geometry.py`   | **Streamlit Version (Reference Python Implementation).** Uses identical underlying physics/math calculations with a parameter-driven UI (sliders and numeric inputs).                                                                         |
 
 _Note: The Python version does not currently include the interactive canvas features present in the HTML version (e.g., direct drag-and-drop handles, direct softbox resizing, dynamic tooltips, or real-time light gradients)._
@@ -37,7 +37,7 @@ _Note: The Python version does not currently include the interactive canvas feat
 
 ### HTML Version
 
-Open `light_geometry.html` directly in any modern web browser, or host it statically via GitHub Pages.
+Open `index.html` directly in any web browser.
 
 ### Streamlit Version
 
