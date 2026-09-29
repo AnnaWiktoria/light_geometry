@@ -10,7 +10,7 @@ A pre-capture planning tool for reprographic setups (digitization, flat art phot
 
 > **Status: Prototype.** This is a geometric model validated qualitatively against real-world studio setups. It is **not** a certification tool and does **not** predict $\Delta E$ values. See [Limitations](#limitations).
 
-<!-- Insert screenshot: docs/screenshot.png -->
+![Screenshot](doc/screenshot.png)
 
 ## Why This Matters
 
