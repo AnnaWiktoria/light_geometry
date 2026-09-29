@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lighting Geometry: two softboxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <noscript>
+    <p style="padding:16px">This tool needs JavaScript. It loads no third-party code and makes no network requests.</p>
+  </noscript>
+  <div id="app">
+    <aside id="ctl" aria-label="Settings"></aside>
+    <main>
+      <header>
+        <h1>Lighting Geometry<small>two softboxes</small></h1>
+        <div class="seg" role="group" aria-label="Map layer">
+          <button type="button" data-l="light" class="on">Light</button>
+          <button type="button" data-l="angle">Angle &amp; reflection</button>
+        </div>
+      </header>
+      <div id="verd" aria-live="polite"></div>
+      <div class="cv">
+        <canvas id="top" width="640" height="360" role="img" aria-label="Top view of the setup"></canvas>
+        <canvas id="side" width="640" height="360" role="img" aria-label="Front view of the setup"></canvas>
+      </div>
+      <p class="lg">Drag the lamp discs, the square handles (softbox width in the top view, height in the front view)
+        and the camera triangle. Every value stays in sync with the fields. Hover over the frame for point values.
+        "Light" layer: warm gradient = relative illuminance, red/orange = specular reflection. "Angle" layer: green = θ
+        within 45° ± tolerance.</p>
+      <div class="mp" id="maps"></div>
+      <p class="note">Geometric model: uniform Lambertian softboxes, the object treated as a flat mirror for the
+        reflection test, frame from a thin-lens model (W = sw·(d−f)/f). The gloss index is relative and does not predict
+        ΔE. The angle tolerance is yours to set per your own procedure. Verify against a photo of a uniform field.</p>
+    </main>
+  </div>
+  <div id="tip" hidden></div>
+  <script src="app.js" defer></script>
+</body>
+
+</html>
